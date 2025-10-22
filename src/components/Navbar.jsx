@@ -8,14 +8,6 @@ function Navbar() {
       <div className={styles.logo}>☕ MiCafetería</div>
       <nav className={styles.navbar}>
         <NavLink
-          to="/"
-          className={({ isActive }) =>
-            isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
-          }
-        >
-          Inicio
-        </NavLink>
-        <NavLink
           to="/menu"
           className={({ isActive }) =>
             isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
@@ -31,6 +23,15 @@ function Navbar() {
         >
           Contacto
         </NavLink>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
+          }
+        >
+          Inicio
+        </NavLink>
+        <button className={styles.reserveButton}>Reservar</button>
       </nav>
     </header>
   );
